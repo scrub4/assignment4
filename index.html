@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <h1>Hassan Alshabanh</h1>
+  <p id="greeting">Hello!</p>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#quote">Quote</a>
+    <a href="#weather">Weather</a>
+    <a href="#contactForm">Contact</a>
+  </nav>
+  <button id="themeToggle" type="button">Toggle Theme</button>
+
+</header>
+
+<main>
+  <section id="about">
+  <h2>About Me</h2>
+  <p>
+    my name is Hassan Alshabanh. doing this assignment. i'm a KFUPM student. 
+  </p>
+  <p><strong>Tagline:</strong> Learning by building.</p>
+
+  <p id="timerDisplay">⏱ Time on site: 0s</p>
+
+  <img src="assets/images/KFUPM_seal.png" alt="Profile placeholder" width="220" loading="lazy" />
+</section>
+
+  <section id="projects-section">
+    <h2>Projects</h2>
+ 
+    <!-- Search + Filter + Sort controls (OUTSIDE the flex projects container) -->
+    <div id="projectControls">
+      <input
+        type="text"
+        id="projectSearch"
+        placeholder="Search projects..."
+      />
+ 
+      <select id="projectFilter">
+        <option value="all">All Categories</option>
+        <option value="web">Web</option>
+        <option value="javascript">JavaScript</option>
+      </select>
+ 
+      <select id="projectSort">
+        <option value="default">Sort: Default</option>
+        <option value="az">Sort: A–Z</option>
+        <option value="za">Sort: Z–A</option>
+      </select>
+    </div>
+ 
+    <p id="noResults" style="display:none; color: red;">No projects match your search.</p>
+ 
+    <div id="projects">
+      <article data-category="web" data-title="Portfolio Website">
+        <img src="assets/images/download.png" alt="Portfolio Website screenshot" loading="lazy"/>
+        <h3>Project 1: Portfolio Website</h3>
+        <p>A simple responsive portfolio site built with HTML, CSS, and JavaScript.</p>
+        <span class="tag">Web</span>
+      </article>
+ 
+      <article data-category="javascript" data-title="To-Do List">
+        <img src="assets/images/doto.png" alt="To-Do List screenshot" loading="lazy"/>
+        <h3>Project 2: To-Do List (Mini)</h3>
+        <p>A small project to practice DOM manipulation and event listeners.</p>
+        <span class="tag">JavaScript</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+ 
+    <div class="skill">
+      <label>HTML</label>
+      <div class="skill-bar">
+        <div class="skill-bar-fill" data-level="90"></div>
+      </div>
+    </div>
+ 
+    <div class="skill">
+      <label>CSS</label>
+      <div class="skill-bar">
+        <div class="skill-bar-fill" data-level="75"></div>
+      </div>
+    </div>
+ 
+    <div class="skill">
+      <label>JavaScript</label>
+      <div class="skill-bar">
+        <div class="skill-bar-fill" data-level="60"></div>
+      </div>
+    </div>
+ 
+    <div class="skill">
+      <label>Problem Solving</label>
+      <div class="skill-bar">
+        <div class="skill-bar-fill" data-level="80"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Quote Section -->
+
+  <section id="quote">
+    <h2>Quote of the Moment</h2>
+    <p id="quoteText">Loading...</p>
+    <p id="quoteAuthor"></p>
+    <button id="newQuoteBtn" type="button">New Quote</button>
+  </section>
+
+    <!-- Weather Section -->
+  <section id="weather">
+    <h2>Weather at KFUPM – Dhahran</h2>
+    <div id="weatherDisplay">
+      <p id="weatherStatus">Loading weather...</p>
+      <div id="weatherInfo" style="display:none;">
+        <p id="weatherTemp"></p>
+        <p id="weatherDesc"></p>
+        <p id="weatherWind"></p>
+        <p id="weatherHumidity"></p>
+      </div>
+    </div>
+    <button id="refreshWeatherBtn" type="button">Refresh Weather</button>
+  </section>
+
+
+
+<section id="contactForm">
+  <h2>Contact</h2>
+  <p>Send me a message </p>
+
+  <form id="contactFormEl" >
+    <label for="name">Name</label><br />
+    <input id="name" name="name" type="text" required /><br /><br />
+
+    <label for="email">Email</label><br />
+    <input id="email" name="email" type="email" required /><br /><br />
+
+    <label for="message">Message</label><br />
+    <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <p>
+    Outside coding, I enjoy learning about history, watching tech news,
+    and experimenting with small coding projects. I also enjoy fitness and reading.
+  </p>
+</section>
+
+<section id="learning-goals">
+  <h2>Learning Goals</h2>
+  <p>
+    Currently working toward building more interactive web apps and improving
+    my JavaScript problem-solving skills.
+  </p>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> hassan alshabanh</p>
+</footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
